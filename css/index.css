@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+* {font-family: 'Noto Sans KR', sans-serif;}
+
+/* slide */
+
+#section {padding-left: 200px; }
+
+#section .slide {
+    height: 900px; width: auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#section .slide > .tm {
+    position: absolute;
+    left: 200px; top: 50%;
+    transform: translateY(-50%);
+}
+
+#section .slide1 {
+    background-image: url(../img/main_hero_img01.jpg);}
+#section .slide2 {
+    background-image: url(../img/main_hero_img02.jpg);
+    display: none;}
+#section .slide3 {
+    background-image: url(../img/main_hero_img03.jpg);
+    display: none;}
+
+#section .slide h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px rgb(0 0 0 / 42%);
+}
+#section .slide p {
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: -0.05rem;
+}
+#section .slide a {
+    display: block;
+    background: #fff;
+    border-radius: 30px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #212529;
+    width: 150px;
+    padding: 13px 30px;
+    font-weight: 700;
+}
+
+/*notice*/
+
+#section .notice .noticewrap {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eaeaea;}
+
+#section .notice .noticewrap > h2 {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    background: #4263eb;
+    color: #fff; font-weight: 700;
+    font-size: 14px;
+}
+
+#section .notice .noticewrap > a {
+    display: inline-block;
+    max-width: 100%;
+    padding-left: 15px;
+    color: #868296;
+    font-size: 14px;
+}
+
+/*about*/
+
+#section .about {
+    padding: 100px 15px;
+}
+#section .about .abouttop {margin-bottom:48px}
+#section .about .abouttop h2 {
+    font-size: 38px;
+    color: #212529;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+#section .about .abouttop p {
+    color: #343a40;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight:600;
+}
+
+#section .about .aboutin .abb {
+    float: left;
+    width: 32%;
+}
+
+#section .about .aboutin .abb .imf {
+    padding: 42px 20px 0;
+}
+
+#section .about .aboutin .abb .imf h2 {
+    font-size: 21px; margin-bottom: 16px;
+    font-weight: 700;
+}
+
+#section .about .aboutin .abb .imf p {
+    width: 95%;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+}

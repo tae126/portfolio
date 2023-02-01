@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@media screen and (max-width:991px) {
+
+    #section {padding-left:0}
+#section .slide1 {
+    background-image: url(../img/main_hero_img01.jpg);
+    height: 750px; width: auto;
+    background-size: cover;
+    background-position: center;}
+
+#section .slide > .tm {
+    position: absolute;
+    left: 140px; top: 50%;
+    transform: translateY(-50%);
+}
+#section .slide h2 {
+    font-size: 40px;}
+
+}
