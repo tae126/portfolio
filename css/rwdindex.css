@@ -2,9 +2,8 @@
 
 @media screen and (max-width:991px) {
 
-    #section {padding-left:0}
-#section .slide1 {
-    background-image: url(../img/main_hero_img01.jpg);
+#section {padding-left:0;z-index: -999;}
+#section .slide {
     height: 750px; width: auto;
     background-size: cover;
     background-position: center;}
@@ -17,4 +16,28 @@
 #section .slide h2 {
     font-size: 40px;}
 
+}
+
+@media screen and (max-width:767px) {
+
+    #section {padding-left:0}
+#section .slide {
+    height: 500px; width: auto;
+    background-size: cover;
+    background-position: center;}
+
+#section .slide > .tm {
+    position: absolute;
+    left: 70px; top: 40%;
+    font-size: 15px;
+}
+#section .slide h2 {
+    font-size: 32px;}
+
+.slide-group .slick-prev {left: 15px;padding-left: 30px;z-index: 99999;}
+.slide-group .slick-next {right: 15px; padding-right: 30px;}
+.slide-group .slick-arrow .prev {display: none;}
+.slide-group .slick-arrow .next {display: none;}
+.slide-group .slick-arrow .arrow {width: 30px
+}
 }

@@ -6,8 +6,8 @@
     width: 200px; position: fixed; 
     top: 0;left: 0;height: 100%;
     background: #fff; 
-    
-    border-right: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;z-index: 1;
+    overflow: hidden
 }
 
 #header .logo {text-align: center;}
@@ -18,10 +18,10 @@
 
 /* 네비게이션 */
 
-#nav {position: relative; height: calc(100% - 100px);}
+#nav {position: relative; height: calc(100% - 100px);display: block;}
 
 #nav .navbody {height: 50vh;overflow-y:auto;margin-right: -17px;
-    overflow-x: hidden;}
+    ;}
 
 #nav .depth1 > li > a > i:first-child {
     display: inline-block;

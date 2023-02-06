@@ -4,13 +4,13 @@
 
 /* slide */
 
-#section {padding-left: 200px; }
+#section {padding-left: 200px;}
 
 .slide-group {position: relative;}
 .slide-group .slick-arrow {position: absolute; top: 50%;
     transform: translateY(-50%);border: none;
     color: #fff; font-size: 15px;}
-.slide-group .slick-prev {left: 30px;padding-left: 40px;z-index: 99999;}
+.slide-group .slick-prev {left: 30px;padding-left: 40px;z-index: 1;}
 .slide-group .slick-next {right: 30px; padding-right: 40px;}
 
 .slide-group .slick-arrow .arrow {width: 40px;height: 2px;
