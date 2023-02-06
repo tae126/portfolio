@@ -11,8 +11,8 @@
 // }
 
 $('#header .open').on('click', function() {
-    $(this).parent().addClass('on')
     $(this).parent().find('#nav').stop().fadeIn(400)
+    $(this).parent().addClass('on')
 })
 
 $('#header .close').on('click', function() {

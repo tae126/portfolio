@@ -34,10 +34,11 @@
 #section .slide h2 {
     font-size: 32px;}
 
-.slide-group .slick-prev {left: 15px;padding-left: 30px;z-index: 99999;}
+.slide-group .slick-prev {left: 15px;padding-left: 30px;z-index: 99999;
+    }
 .slide-group .slick-next {right: 15px; padding-right: 30px;}
 .slide-group .slick-arrow .prev {display: none;}
 .slide-group .slick-arrow .next {display: none;}
-.slide-group .slick-arrow .arrow {width: 30px
+.slide-group .slick-arrow .arrow {width: 30px;
 }
 }
