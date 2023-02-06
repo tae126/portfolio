@@ -6,6 +6,43 @@
 
 #section {padding-left: 200px; }
 
+.slide-group {position: relative;}
+.slide-group .slick-arrow {position: absolute; top: 50%;
+    transform: translateY(-50%);border: none;
+    color: #fff; font-size: 15px;}
+.slide-group .slick-prev {left: 30px;padding-left: 40px;z-index: 99999;}
+.slide-group .slick-next {right: 30px; padding-right: 40px;}
+
+.slide-group .slick-arrow .arrow {width: 40px;height: 2px;
+    position: absolute;background: #fff;transition: all 0.3s;}
+.slide-group .slick-arrow:hover > .arrow {width: 25px;}
+.slide-group .slick-prev .arrow {left: 0;top: 50%;transform: translateY(-50%);}
+.slide-group .slick-next .arrow {right: 0;top: 50%;transform: translateY(-50%);}
+.slide-group .slick-arrow .prev {margin-left: 20px;}
+.slide-group .slick-arrow .next {margin-right: 20px;}
+.slide-group .slick-prev .arrow:before {content: '';display:block ;
+    width: 13px;height: 2px;
+    background: #fff;transform: rotate(-45deg);
+    position: absolute;top: -5px;}
+.slide-group .slick-next .arrow:before {content: '';display:block ;
+    width: 13px;height: 2px;
+    background: #fff;transform: rotate(45deg);
+    position: absolute;right:0px;top: -5px;}
+
+.slide-group .slick-dots {position: absolute; width: 100%;
+    text-align: center; bottom: 50px;}
+.slide-group .slick-dots li {display: inline-block;
+    margin: 0 7px;background: rgba(255,255,255,.3);
+    border-radius: 50%;width: 10px;height:10px;
+    position: relative;}
+.slide-group .slick-dots li button {border: none;
+    width: 10px;height:10px;border-radius: 50%;
+    text-indent: -9999px;overflow: hidden;
+    position: absolute; top: 0;left: 0;}
+
+.slide-group .slick-dots li.slick-active button {background: #fff;}
+
+
 #section .slide {
     height: 900px; width: auto;
     background-size: cover;
@@ -22,10 +59,11 @@
     background-image: url(../img/main_hero_img01.jpg);}
 #section .slide2 {
     background-image: url(../img/main_hero_img02.jpg);
-    display: none;}
+    }
 #section .slide3 {
     background-image: url(../img/main_hero_img03.jpg);
-    display: none;}
+    }
+
 
 #section .slide h2 {
     font-size: 48px;

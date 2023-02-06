@@ -5,8 +5,8 @@
 #header {
     width: 200px; position: fixed; 
     top: 0;left: 0;height: 100%;
-    background: #fff; z-index: 99;
-    overflow: hidden;
+    background: #fff; 
+    
     border-right: 1px solid #f0f0f0;
 }
 
@@ -19,6 +19,9 @@
 /* 네비게이션 */
 
 #nav {position: relative; height: calc(100% - 100px);}
+
+#nav .navbody {height: 50vh;overflow-y:auto;margin-right: -17px;
+    overflow-x: hidden;}
 
 #nav .depth1 > li > a > i:first-child {
     display: inline-block;
@@ -35,10 +38,8 @@
     display:none}
 
 #nav .depth1 {
-    margin-bottom: 80px; 
-    margin-right: -17px;
-    height: 550px;
-    overflow-y:auto;}
+    margin-bottom: 80px;
+    height: 550px;}
 
 #nav .depth1 > li > a {
     display:block;padding: 25px 28px; 
@@ -82,7 +83,7 @@
 
 #nav .depth1 > li .depth2 {display: none;}
 
-#nav .depth1 > li.on .depth2 {display:block;}
+/* #nav .depth1 > li.on .depth2 {display:block;} */
 
 #nav .depth1 > li .depth2 > li a {   
     display: block;

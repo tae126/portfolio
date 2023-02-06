@@ -20,8 +20,8 @@ $('#header .close').on('click', function() {
 
 $('#nav .depth1 > li > a').on('click', function() {
     $(this).parent().toggleClass('on')
-    $(this).parent().siblings().removeClass('on')
-    
+    // $(this).parent().siblings().removeClass('on')
+    $(this).parent().find('.depth2').stop().slideToggle()
 })
 
 
