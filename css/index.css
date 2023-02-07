@@ -6,6 +6,76 @@
 
 #section {padding-left: 200px;}
 
+#section .slide {
+    height: 850px; width: auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#section .slide > .tm {
+    position: absolute;
+    left: 200px; top: 50%;
+    transform: translateY(-50%);
+}
+
+#section .slide1 {
+    background-image: url(../img/main_hero_img01.jpg);}
+#section .slide2 {
+    background-image: url(../img/main_hero_img02.jpg);
+    }
+#section .slide3 {
+    background-image: url(../img/main_hero_img03.jpg);
+    }
+
+
+#section .slide h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px rgb(0 0 0 / 42%);
+    transform: translateX(-10%);
+    opacity: 0;
+    transition: all 1s 0.6s;
+}
+#section .slide.slick-current.slick-active h2 {
+    transform: translateX(0%);opacity:1;
+}
+
+#section .slide p {
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: -0.05rem;
+    transform: translateX(-10%);
+    opacity: 0;
+    transition: all 1s 0.75s;
+}
+#section .slide.slick-current.slick-active p {
+    transform: translateX(0%);opacity:1;
+}
+
+#section .slide a {
+    display: block;
+    background: #fff;
+    border-radius: 30px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #212529;
+    width: 150px;
+    padding: 13px 30px;
+    font-weight: 700;
+    transform: translateX(-10%);
+    opacity: 0;
+    transition: all 1.2s 1.3s;
+}
+
+#section .slide.slick-current.slick-active a {
+    transform: translateX(0%);opacity:1;
+}
+
 .slide-group {position: relative;}
 .slide-group .slick-arrow {position: absolute; top: 50%;
     transform: translateY(-50%);border: none;
@@ -42,55 +112,24 @@
 
 .slide-group .slick-dots li.slick-active button {background: #fff;}
 
+.article1 {position: relative;}
 
-#section .slide {
-    height: 900px; width: auto;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-#section .slide > .tm {
-    position: absolute;
-    left: 200px; top: 50%;
-    transform: translateY(-50%);
+.article1 .scroll {
+    position:absolute; bottom: 12%;
+    left: 50%;transform: translateX(-50%);
+    width: 80px; cursor:pointer;
+    z-index: 99;
 }
 
-#section .slide1 {
-    background-image: url(../img/main_hero_img01.jpg);}
-#section .slide2 {
-    background-image: url(../img/main_hero_img02.jpg);
-    }
-#section .slide3 {
-    background-image: url(../img/main_hero_img03.jpg);
-    }
-
-
-#section .slide h2 {
-    font-size: 48px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.35;
-    margin-bottom: 16px;
-    text-shadow: 0 0 10px rgb(0 0 0 / 42%);
-}
-#section .slide p {
-    font-size: 17px;
-    color: #fff;
-    line-height: 1.5;
-    letter-spacing: -0.05rem;
-}
-#section .slide a {
-    display: block;
-    background: #fff;
-    border-radius: 30px;
-    margin-top: 40px;
-    text-align: center;
-    font-size: 15px;
-    color: #212529;
-    width: 150px;
-    padding: 13px 30px;
-    font-weight: 700;
-}
+.article1 .scroll span {display:block;color: #fff; font-size: 12px; 
+    font-weight:600; text-align:center; margin-bottom:10px;
+    line-height: 1.5em;}
+.article1 .scroll .mouse {width: 36px; height: 58px;margin:auto;
+    border:2px solid rgba(255,255,255,.6); border-radius:36px;
+    position: relative;}
+.article1 .scroll .wheel {position: absolute;top: 8px;left: 50%;
+    width: 3px;height: 8px; border-radius: 6px;background: #fff;
+    margin-left: -1.5px;}
 
 /*notice*/
 
@@ -156,3 +195,37 @@
     font-size: 15px;
     line-height: 1.6;
 }
+
+/* 배너 */
+
+.banner .ban1 {background-image: url(../img/main_banner_img01.jpg);}
+.banner .ban2 {background-image: url(../img/main_banner_img02.jpg);}
+.banner .img {
+    float: left; width: 50%;
+    height:350px;margin-top: 100px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;}
+.banner .cap {padding: 48px;position: absolute;
+    bottom:-20%}
+.banner .cap h2 {font-size: 24px; 
+    font-weight: 600; 
+    margin-bottom: 12px;
+    color: #fff;}
+.banner .cap p {font-size: 17px; 
+    font-weight: 500; 
+    line-height: 1.7;
+    opacity: 0.7;
+    color:#fff;}
+.banner .cap a {font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    margin-top: 28px;
+    padding: 14px 32px;
+    min-width: 150px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    display:inline-block;
+    opacity: 0;}

@@ -21,7 +21,7 @@
 #nav {position: relative; height: calc(100% - 100px);display: block;}
 
 #nav .navbody {height: 50vh;overflow-y:auto;margin-right: -17px;
-    ;}
+    }
 
 #nav .depth1 > li > a > i:first-child {
     display: inline-block;
@@ -101,8 +101,9 @@
     position: absolute; 
     left :0; bottom: 50px;
     color: #868e96; 
-    padding: 0 20px; font-size: 13px;
-    line-height: 1.6;}
+    padding: 20px 20px 0 20px; font-size: 13px;
+    line-height: 1.6;
+    background: #fff;}
 
 #nav .info  > #address {margin-bottom: 10px;}
 

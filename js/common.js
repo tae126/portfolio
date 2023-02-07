@@ -10,14 +10,15 @@
 //     header.classList.remove('on')
 // }
 
+
 $('#header .open').on('click', function() {
     $(this).parent().find('#nav').stop().fadeIn(400)
     $(this).parent().addClass('on')
 })
 
 $('#header .close').on('click', function() {
-    $(this).parents('#header').removeClass('on')
     $(this).parents('#nav').stop().fadeOut(400)
+    $(this).parents('#header').removeClass('on')
 })
 
 $('#nav .depth1 > li > a').on('click', function() {

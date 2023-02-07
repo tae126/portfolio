@@ -7,7 +7,8 @@
 #header {width: 100%;
     position: fixed;
     top: 0 ;left: 0;height:60px;
-    background: #fff;}
+    background: #fff;
+    z-index:99;}
 
 #header .logo {
     position: absolute;
@@ -49,7 +50,8 @@
     left: -100%; top:0;height:100%;
     background: #fff; width: 280px;
     transition:all 0.4s;
-    overflow-y: hidden;}
+    overflow-y: hidden;
+    }
 
 #nav .navbody .depth1 {
     position: absolute;
