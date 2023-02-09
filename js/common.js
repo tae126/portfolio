@@ -25,6 +25,10 @@ $('#nav .depth1 > li > a').on('click', function() {
     $(this).parent().toggleClass('on')
     // $(this).parent().siblings().removeClass('on')
     $(this).parent().find('.depth2').stop().slideToggle()
+
+
+    $(this).parent().siblings().find('.depth2').slideUp()
+    $(this).parent().siblings().removeClass('on')
 })
 
 

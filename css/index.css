@@ -158,9 +158,10 @@
 /*about*/
 
 #section .about {
-    padding: 100px 15px;
-}
-#section .about .abouttop {margin-bottom:48px}
+    width: 100%;padding: 100px 15px;position: relative;
+    overflow:hidden}
+
+#section .about .abouttop {padding-bottom:48px}
 #section .about .abouttop h2 {
     font-size: 38px;
     color: #212529;
@@ -175,9 +176,11 @@
     font-weight:600;
 }
 
+#section .about .aboutin {max-width: 100%;}
+
 #section .about .aboutin .abb {
-    float: left;
-    width: 32%;
+    float:left;
+    width: 33.3%;
 }
 
 #section .about .aboutin .abb .imf {
@@ -198,17 +201,40 @@
 
 /* 배너 */
 
-.banner .ban1 {background-image: url(../img/main_banner_img01.jpg);}
-.banner .ban2 {background-image: url(../img/main_banner_img02.jpg);}
+.banner {overflow:hidden}
 .banner .img {
-    float: left; width: 50%;
-    height:350px;margin-top: 100px;
-    background-position: center;
-    background-size: cover;
+    top:0;
+    float:left; width: 50%;
+    height:350px;
     position: relative;
-    overflow: hidden;}
-.banner .cap {padding: 48px;position: absolute;
-    bottom:-20%}
+    overflow: hidden;
+    cursor: pointer;}
+.banner .img:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+    opacity: 0;
+    z-index: 5;
+    transition: all 0.5s;
+}
+.banner .img:hover:before {opacity: 1;}
+.banner .img:hover > img {transform: scale(1.1);}
+.banner .img > img {transition: all 0.5s;
+    position: absolute;max-width: 100%;height: 350px;
+    object-fit: cover;}
+
+.banner .img:hover > .cap {transform:translateY(55%)}
+
+.banner .img:hover > .cap > a {opacity: 1;}
+
+.banner .img > .cap > a:hover {background: #fff; color:#000}
+.banner .img .cap {padding: 48px;position: absolute;
+    transform: translateY(88%);z-index: 6;transition: all 0.5s;}
 .banner .cap h2 {font-size: 24px; 
     font-weight: 600; 
     margin-bottom: 12px;
@@ -218,7 +244,7 @@
     line-height: 1.7;
     opacity: 0.7;
     color:#fff;}
-.banner .cap a {font-size: 15px;
+.banner .img > .cap > a {font-size: 15px;
     font-weight: 500;
     color: #fff;
     text-align: center;
@@ -228,4 +254,103 @@
     border: 1px solid #fff;
     border-radius: 30px;
     display:inline-block;
-    opacity: 0;}
+    opacity: 0;
+    transition:all 0.5s}
+
+/* 제품소개 */
+
+.cont { padding: 100px 0;background: #f7f7f7;overflow:hidden}
+.conttop {overflow:hidden; padding:0 15px 40px 15px}
+.cont .conttop > h2 {font-size: 38px;font-weight: 700;float: left;}
+.cont .conttop > a {font-size: 19px;font-weight: 500;color: #333;float: right;}
+
+.cont .contlist {overflow: hidden;}
+.cont .contlist .cimg {max-width: 25%;float: left;padding: 0 8px;}
+.cont .contlist .cimt img {object-fit: cover;}
+
+.cont .contcap {padding: 32px;
+    font-weight: 600;border: 1px solid #d9d9d9;
+    border-top: 0;
+    background-color: #fff;
+    height: 50%;
+    transform: translateY(-40%);
+    height: 150px;}
+.cont .contcap p {font-size: 14px; color: #4263eb;
+    padding-bottom: 12px;}
+.cont .contcap a {font-size: 19px; line-height: 1.4;}
+
+/*문의*/
+
+.contact {max-width: 1330px; padding:0 15px;
+    margin: 0 auto;}
+.contact .contactwrap {width: 100%;position: relative;}
+.contact .wd {position: absolute;width: 50%;}
+.contact .guide {top: 0;left: 0;}
+.contact .coninput {top: 0;right: 0;}
+.contact h2 {font-size: 38px;font-weight: 700;padding: 90px 0 50px 0;}
+
+.contact .guide p:first-child {color: #666;line-height: 1.8;
+    letter-spacing: -0.05rem; font-weight: 600;font-size: 15px;
+    margin-bottom: 24px;}
+
+.contact .cticon {color: #868296;font-size: 20px;
+    margin-bottom: 12px;margin-top: 30px}
+.contact .guide .address {color: #555;font-size: 13px;line-height: 1.8;}
+.contact .guide a {color:#343a40; font-size: 13px;}
+
+.contact .coninput #category {float: left;width: 47%;
+    height: 50px;display: block;margin: 1%;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #495057;
+    font-size: 14px;padding-left: 16px;
+    padding-right:20px}
+.contact .coninput .in input {float:left;width: 47%;
+    height: 50px;display: block;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;padding-left: 16px;
+    margin: 1%;}
+
+
+.contact .coninput .in2 > input {margin-bottom: 2%;}
+
+.contact .coninput .textarea {padding:8px 0;}
+.contact .coninput textarea {display: block;
+    width: 96.5%;height: 170px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;padding: 16px;
+    margin: 1%;}
+
+.contact .coninput .check {   
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 0;
+    padding: 20px 0 30px 1%;}
+.contact .coninput .check a {color: #007bff;text-decoration-line: underline;}
+
+.contact .coninput .check input {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.contact .send button {padding:13px 24px;font-size: 15px;
+    min-width: 130px;
+    border: none; border-radius: 6px;}
+
+.contact .send button:first-child {background: #4484f7;
+    color: #fff; font-weight: 700;margin-left: 1%;}
+.contact .send button:last-child { color: #495057;
+    border: 1px solid #ced4ea;
+    margin-left: 8px;} 
