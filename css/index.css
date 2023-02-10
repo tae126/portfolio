@@ -191,6 +191,8 @@
     width: 33.3%;
 }
 
+#section .about .aboutin .abb img {width: 100%;}
+
 #section .about .aboutin .abb .imf {
     padding: 42px 20px 0;
 }
@@ -217,6 +219,8 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;}
+
+.banner .img img{width: 100%;}
 
 .banner .img:before {
     content: '';
@@ -394,7 +398,7 @@
 
 /* 배너 샘플 */
 
-.partner {max-width: 1330px;padding: 100px 0;
+.partner {width: 100%;padding: 100px 0;
     background: #f7f7f7;}
 
 .partner .partnerwrap {overflow:hidden;width: 100%;
