@@ -129,7 +129,15 @@
     position: relative;}
 .article1 .scroll .wheel {position: absolute;top: 8px;left: 50%;
     width: 3px;height: 8px; border-radius: 6px;background: #fff;
-    margin-left: -1.5px;}
+    margin-left: -1.5px;
+    animation: wheel-ani 1s linear infinite;}
+    @keyframes wheel-ani {
+        0% {opacity: 0; transform: translateY(0)}
+        25% {opacity: 1; transform: translateY(10px)}
+        75% {opacity: 1; transform: translateY(10px)}
+        100% {opacity: 0; transform: translateY(10px)}
+    }
+    
 
 /*notice*/
 
@@ -209,6 +217,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;}
+
 .banner .img:before {
     content: '';
     position: absolute;
@@ -222,28 +231,36 @@
     z-index: 5;
     transition: all 0.5s;
 }
+
 .banner .img:hover:before {opacity: 1;}
+
 .banner .img:hover > img {transform: scale(1.1);}
+
 .banner .img > img {transition: all 0.5s;
     position: absolute;max-width: 100%;height: 350px;
     object-fit: cover;}
+
 
 .banner .img:hover > .cap {transform:translateY(55%)}
 
 .banner .img:hover > .cap > a {opacity: 1;}
 
 .banner .img > .cap > a:hover {background: #fff; color:#000}
-.banner .img .cap {padding: 48px;position: absolute;
-    transform: translateY(88%);z-index: 6;transition: all 0.5s;}
+
+.banner .img .cap {padding: 48px;position: absolute;bottom: 100px;
+    transform: translateY(75%);z-index: 6;transition: all 0.5s;}
+
 .banner .cap h2 {font-size: 24px; 
     font-weight: 600; 
     margin-bottom: 12px;
     color: #fff;}
+
 .banner .cap p {font-size: 17px; 
     font-weight: 500; 
     line-height: 1.7;
     opacity: 0.7;
     color:#fff;}
+
 .banner .img > .cap > a {font-size: 15px;
     font-weight: 500;
     color: #fff;
@@ -260,13 +277,18 @@
 /* 제품소개 */
 
 .cont { padding: 100px 0;background: #f7f7f7;overflow:hidden}
+
 .conttop {overflow:hidden; padding:0 15px 40px 15px}
+
 .cont .conttop > h2 {font-size: 38px;font-weight: 700;float: left;}
+
 .cont .conttop > a {font-size: 19px;font-weight: 500;color: #333;float: right;}
 
 .cont .contlist {overflow: hidden;}
-.cont .contlist .cimg {max-width: 25%;float: left;padding: 0 8px;}
-.cont .contlist .cimt img {object-fit: cover;}
+
+.cont .contlist .cimg {width: 25%;float: left;padding: 0 8px;}
+
+.cont .contlist .cimt img {object-fit: cover;width: 25%;}
 
 .cont .contcap {padding: 32px;
     font-weight: 600;border: 1px solid #d9d9d9;
@@ -275,19 +297,27 @@
     height: 50%;
     transform: translateY(-40%);
     height: 150px;}
+
 .cont .contcap p {font-size: 14px; color: #4263eb;
     padding-bottom: 12px;}
-.cont .contcap a {font-size: 19px; line-height: 1.4;}
+
+.cont .contcap a {font-size: 19px; line-height: 1.4;height: 59px
+    ;text-overflow: ellipsis;word-break: keep-all;overflow:hidden}
 
 /*문의*/
 
-.contact {max-width: 1330px; padding:0 15px;
+.contact {max-width: 1330px; padding:100px 15px;
     margin: 0 auto;}
-.contact .contactwrap {width: 100%;position: relative;}
-.contact .wd {position: absolute;width: 50%;}
-.contact .guide {top: 0;left: 0;}
-.contact .coninput {top: 0;right: 0;}
-.contact h2 {font-size: 38px;font-weight: 700;padding: 90px 0 50px 0;}
+
+.contact .contactwrap {width: 100%;position: relative;overflow: hidden;}
+
+.contact .wd {width: 50%;}
+
+.contact .guide {float:left}
+
+.contact .coninput {float:right}
+
+.contact h2 {font-size: 38px;font-weight: 700;padding-bottom: 50px;}
 
 .contact .guide p:first-child {color: #666;line-height: 1.8;
     letter-spacing: -0.05rem; font-weight: 600;font-size: 15px;
@@ -295,10 +325,11 @@
 
 .contact .cticon {color: #868296;font-size: 20px;
     margin-bottom: 12px;margin-top: 30px}
+
 .contact .guide .address {color: #555;font-size: 13px;line-height: 1.8;}
 .contact .guide a {color:#343a40; font-size: 13px;}
 
-.contact .coninput #category {float: left;width: 47%;
+.contact .coninput .category {float: left;width: 47%;
     height: 50px;display: block;margin: 1%;
     border: 1px solid #d9d9d9;
     border-radius: 6px;
@@ -306,6 +337,9 @@
     color: #495057;
     font-size: 14px;padding-left: 16px;
     padding-right:20px}
+
+.contact .coninput .in {overflow: hidden;}
+
 .contact .coninput .in input {float:left;width: 47%;
     height: 50px;display: block;
     border: 1px solid #d9d9d9;
@@ -315,9 +349,9 @@
     margin: 1%;}
 
 
-.contact .coninput .in2 > input {margin-bottom: 2%;}
+.contact .coninput .in2 > input {margin-bottom: 1%;}
 
-.contact .coninput .textarea {padding:8px 0;}
+
 .contact .coninput textarea {display: block;
     width: 96.5%;height: 170px;
     border: 1px solid #d9d9d9;
@@ -334,6 +368,7 @@
     color: #666;
     margin-bottom: 0;
     padding: 20px 0 30px 1%;}
+
 .contact .coninput .check a {color: #007bff;text-decoration-line: underline;}
 
 .contact .coninput .check input {
@@ -351,6 +386,27 @@
 
 .contact .send button:first-child {background: #4484f7;
     color: #fff; font-weight: 700;margin-left: 1%;}
+    
 .contact .send button:last-child { color: #495057;
     border: 1px solid #ced4ea;
     margin-left: 8px;} 
+
+
+/* 배너 샘플 */
+
+.partner {max-width: 1330px;padding: 100px 0;
+    background: #f7f7f7;}
+
+.partner .partnerwrap {overflow:hidden;width: 100%;
+    padding: 0  15px;}
+
+.partner h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #212529;
+    padding-bottom: 50px;
+    line-height: 45px;}
+
+.partner .sample {float:left;}
+
+.partner .sample img {padding: 0 0.1% 0.5% 0.1%;width: 16.25%;}

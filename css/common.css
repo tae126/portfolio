@@ -113,3 +113,14 @@
     margin-top: 10px; text-align: center;
     width: 170px;
     font-size: 12px;}
+
+
+/* 페이지 로딩 */
+
+.introAni {position: fixed; top: 0;left: 0;bottom: 0;width: 100%;
+    background: #212529; color: #Fff;
+    font-size: 50px; text-align:center;
+    z-index:9999999; display: flex; flex-direction:column;
+    align-items: center; justify-content: center;
+}
+.introAni div {padding: 20px;}

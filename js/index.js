@@ -8,3 +8,9 @@ $('.article1 .slide-group').slick({
     nextArrow:'<button class="slick-next slick-arrow"><span class="arrow"></span><span class="next">NEXT</span></button>',
     
 })
+
+
+$('.scroll').on('click', function() {
+    let mouse = $('.notice').offset().top
+    $('html').animate({scrollTop:mouse},500)
+})

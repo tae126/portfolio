@@ -16,7 +16,12 @@
 #section .slide h2 {
     font-size: 40px;}
 
+
+.cont .contlist .cimg {width: 50%}
+
+.partner .sample img {padding: 0 0.1% 0.5% 0.1%;width: 33%;}
 }
+
 
 @media screen and (max-width:767px) {
 
@@ -45,6 +50,35 @@
 }
 .article1 .scroll .mouse {width: 28px; height: 45px;}
 .article1 .scroll .wheel {position: absolute;top: 6px;}
+
+#section .about .abouttop p {
+    color: #343a40;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight:600;
+}
+#section .about .aboutin .abb .imf p {
+    width: 100%;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+    font-weight:600}
+
+#section .about .aboutin .abb {
+    float:none;
+    width: 100%;
+}
+#section .about .aboutin .abb img {width: 100%;}
+
+.partner .sample img {padding: 0 0.1% 0.5% 0.1%;width: 24.5%;}
+
+.contact .guide {float:none;width: 100%;}
+
+.contact .coninput {float:none;width: 100%;padding-top: 50px;}
+
+.banner .img .cap {padding: 48px;position: absolute;
+    transform: translateY(70%);z-index: 6;transition: all 0.5s;}
 }
 
 
@@ -52,4 +86,17 @@
 
 @media screen and (max-width: 575px) {
     .article1 .scroll {display: none;}
+
+    .partner .sample img {padding: 0 0.1% 0.5% 0.1%;width: 49.5%;}
+
+    .banner .img {
+        top:0;
+        float:none; width: 100%;
+        height:270px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;}
+
+    .banner .img .cap {padding: 48px;position: absolute;
+        transform: translateY(60%);z-index: 6;transition: all 0.5s;}
 }
